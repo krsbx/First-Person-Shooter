@@ -307,9 +307,10 @@ GameObject:
   - component: {fileID: 1701151811}
   - component: {fileID: 1701151810}
   - component: {fileID: 1701151809}
-  - component: {fileID: 1701151808}
+  - component: {fileID: 1701151814}
   - component: {fileID: 1701151813}
   - component: {fileID: 1701151812}
+  - component: {fileID: 1701151808}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -317,20 +318,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1701151808
-CapsuleCollider:
+--- !u!114 &1701151808
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701151807}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9ec38de9d60d94a8665861e4113a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultBobSpeed: 10
+  BobRunSpeed: 15
+  BobCrouchSpeed: 5
+  BobCurrentSpeed: 0
+  DefaultBobAmount: 0.1
+  RunBobAmount: 0.15
+  CrouchBobAmount: 0.08
+  CurrentBobAmount: 0
 --- !u!23 &1701151809
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -406,10 +413,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MouseSensitivity: 100
+  DefaultSpeed: 20
   CurrentSpeed: 20
+  RunSpeed: 35
+  CrouchSpeed: 15
+  DistCheck: 0.2
+  GravityForces: 10
+  JumpForces: 10
+  Crouch: 306
+  Run: 304
+  Jump: 32
   rb: {fileID: 0}
   cc: {fileID: 0}
---- !u!54 &1701151813
+--- !u!136 &1701151813
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701151807}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1701151814
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

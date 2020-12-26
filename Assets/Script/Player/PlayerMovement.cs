@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //Player Attributes
     [Range(0, 200)] public float MouseSensitivity = 100f, DefaultSpeed = 20f;
-    [Range(0, 200)] public float CurrentSpeed = 20f, RunSpeed = 100f, CrouchSpeed = 20f;
+    [Range(0, 200)] public float CurrentSpeed = 20f, RunSpeed = 35f, CrouchSpeed = 15f;
     //Jump Attributes
     [Range(0.2f, 20)] public float DistCheck = 0.2f, GravityForces = 10f, JumpForces = 10f;
     //Special Keys
